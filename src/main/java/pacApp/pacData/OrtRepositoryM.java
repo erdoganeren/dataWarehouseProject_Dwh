@@ -9,5 +9,5 @@ import pacApp.pacModel.Ort;
 
 public interface OrtRepositoryM extends MongoRepository<Ort, Long> {
 	Ort findById(long id);
-    Optional<Ort> findOneByPlz(int plz);
+    Optional<Ort> findOneByPlz(long plz);
 }
