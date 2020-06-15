@@ -75,8 +75,8 @@ public class KafkaConsumer {
 			ortRepositoryM.save(ort);
 		} else if (sqlAction.equals(SqlActionEnum.SQL_ACTION_UPDATE)) {
 			ortRepositoryM.save(ort);
-		} else if (sqlAction.equals(SqlActionEnum.SQL_ACTION_DELETE)) {
-			ortRepositoryM.delete(ort);
+		} else if (sqlAction.equals(SqlActionEnum.SQL_ACTION_DELETE)) {	
+			ortRepositoryM.deleteByOrtid(ort.getId());
 		}
 		return false;
 	}	
@@ -90,6 +90,5 @@ public class KafkaConsumer {
 			hausRepositoryM.delete(haus);
 		}
 		return false;
-	}	
-	
+	}		
 }
